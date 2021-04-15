@@ -282,7 +282,7 @@ public class PaynowPoller extends HttpServlet {
                       String strDate = g.getDate(recID);
 
 
-                       String queryGL = "INSERT INTO [NUST2017].[dbo].[NUST_USD$BankTransactionLines]\n"+
+                                    String queryGL = "INSERT INTO [NUST2017].[dbo].[NUST_USD$BankTransactionLines]\n"+
                        "            ([Reference No_]\n" +
                        "           ,[Payment Date]\n" +
                        "           ,[Registration No_]\n" +
@@ -294,7 +294,8 @@ public class PaynowPoller extends HttpServlet {
                        "           ,[Solution Description]\n" +
                        "           ,[Account]\n" +
                        "           ,[Department]\n" +
-                       "           ,[Loan Code])\n" +
+                       "           ,[Loan Code]\n" +
+                       "           ,[Currency Code])\n" +                        
                        "     VALUES\n" +
                        "           ("+paynowreferenceArray[1]+"\n" +
                        "           ,'"+strDate+"'\n" +
@@ -307,7 +308,9 @@ public class PaynowPoller extends HttpServlet {
                        "           ,''\n" +
                        "           ,''\n" +
                        "           ,''\n" +
+                       "           ,''\n"+
                        "           ,'')\n"; 
+ 
                        Listener listener = new Listener();
                        //the point where we are to comment out going to nav till 3rd of April 2018
                        // or we only depoly this solution after the 3rd of April 2018
