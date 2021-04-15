@@ -43,8 +43,8 @@ public class DatabaseNav {
            String url1 = "jdbc:sqlserver://196.220.119.10:1433;databaseName=NUST2017";
            // String url1 = "jdbc:sqlserver://196.220.119.58:1433;databaseName=Test_NUST2017";
             //String uName1 = "umgaga";
-            String uName1 = "software";
-            String uPass1 = "Monday2@nust.ac.zw";
+            String uName1 = "sa";
+            String uPass1 = "icts1@nust.ac.zw";
             //String uPass1 = "Mdaka@nust.ac.zw";		
             conn = DriverManager.getConnection( url1 , uName1, uPass1);
             System.out.println("connected successfully to NAV test database by Musa");
