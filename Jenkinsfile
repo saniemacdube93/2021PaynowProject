@@ -18,8 +18,8 @@ pipeline {
          stage ('Deploy') {
 
              steps {
-                 sh 'cp /var/lib/jenkins/workspace/NUST_Online_Application_WebApp/target/*.war /var/lib/jenkins/workspace/NUST_Online_Application_WebApp/target/paynow.war'
-                 sh 'cp /var/lib/jenkins/workspace/NUST_Online_Application_WebApp/target/paynow.war /var/lib/tomcat9/webapps'
+                 sh 'cp /var/lib/jenkins/workspace/NUST_Paynow_Integration/target/*.war /var/lib/jenkins/workspace/NUST_Paynow_Integration/target/paynow.war'
+                 sh 'cp /var/lib/jenkins/workspace/NUST_Paynow_Integration/target/paynow.war /var/lib/tomcat9/webapps'
              }
          }  
           stage ('Reload Tomcat Server') {
